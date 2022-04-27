@@ -47,15 +47,15 @@ class MainActivity : AppCompatActivity() {
     val tl: TableLayout = findViewById(R.id.tableLayout)
     val tableRow: TableRow = tl.getChildAt(1) as TableRow
     val tableColumn: TextView = tableRow.getChildAt(2) as TextView
-    var pluhs : Double = tableColumn.text.toString().toDouble()
-    Log.d("pluhs", pluhs.toString());
+    val pluhs : Double = tableColumn.text.toString().toDouble()
+    Log.d("pluhs", pluhs.toString())
   }
 
   private fun strToDouble(str : String) : Double {
     if (str != "") {
       return str.toDouble()
     } else {
-      return 0.0;
+      return 0.0
     }
   }
 
@@ -73,8 +73,6 @@ class MainActivity : AppCompatActivity() {
     val textViewPluhaCost = findViewById<TextView>(R.id.textViewPluhaCost)
 
     val price: Int = strToInt(editTextPrice.text.toString())
-    val PluhAll: Double = strToDouble(textViewPluhAll.text.toString())
-    val PluhaCost: Double = strToDouble(textViewPluhaCost.text.toString())
 
     val tl: TableLayout = findViewById(R.id.tableLayout)
     var pluhs : Double = 0.0
@@ -124,9 +122,16 @@ class MainActivity : AppCompatActivity() {
       if (countOfPluhs.text.toString().toDouble() < 0)
         countOfPluhs.text = "0"
     }
-
+    dialogSetName(tr)
     tl.addView(tr)
   }
 
+  private fun dialogSetName(tr: TableRow) {
+    val listener: CustomDialog.FullNameListener = CustomDialog.FullNameListener() { fullName ->
+      tr.findViewById<TextView>(R.id.textView6).text = fullName
+    }
+    val dialog = CustomDialog(this, listener)
+    dialog.show()
+  }
 
 }
