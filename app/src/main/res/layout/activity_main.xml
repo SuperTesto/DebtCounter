@@ -39,11 +39,11 @@
         android:text="@string/totalCost"
         android:textColor="#BCAAA4"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPrice"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextPrice"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -108,7 +108,7 @@
         android:layout_marginTop="28dp"
         android:text="Всего (руб.)"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPrice" />
 
     <TextView
         android:id="@+id/textView11"
@@ -119,7 +119,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textViewPluhAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -134,14 +134,22 @@
         android:layout_marginEnd="10dp"
         android:text="Цена за шт (руб.):"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView14" />
+        app:layout_constraintEnd_toStartOf="@+id/textViewPluhaCost" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/textViewPluhaCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="542dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

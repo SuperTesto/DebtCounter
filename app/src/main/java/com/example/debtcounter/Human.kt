@@ -8,6 +8,7 @@ class Human {
   fun setName(_name: String){
     name = _name
   }
+
   fun getName():String{
     return name
   }
@@ -26,10 +27,10 @@ class Human {
     return total;
   }
 
-
   fun amountInc():Double{
     return amount.plus(0.5)
   }
+
   fun amountDec():Double{
     return amount.minus(0.5)
   }
