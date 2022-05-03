@@ -1,9 +1,9 @@
 package com.example.debtcounter
 
-class Human {
-  private var name: String = ""
-  private var total: Double = 0.0
-  private var amount: Double = 0.0
+class Human(private var _name: String, private var _amount : Double, private var _total : Double) {
+  private var name: String = _name
+  private var amount: Double = _amount
+  private var total: Double = _total
 
   fun setName(_name: String){
     name = _name
